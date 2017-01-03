@@ -1,10 +1,8 @@
 // use strict mode
 "use strict";
+import { express } from "express";
 
 var
-
-    // Bring in express
-    express = require("express"),
 
     // Bring in underscore
     _ = require("underscore"),
