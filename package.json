@@ -10,7 +10,7 @@
     "url": "https://github.com/javascript-canon/react.git"
   },
   "scripts": {
-    "build-js": "browserify js-build/*.js | uglifyjs -mc > public/js/scripts.js",
+    "build-js": "browserify js-build/*.js | uglifyjs -mc > ../../javascript-canon/public/js/react/scripts.js",
     "build-sass": "node-sass css-build/style.scss css-build/style.css",
     "concat-css": "cat css-build/*.css > public/css/style.css",
     "clean-css": "cleancss public/css/style.css --s0 -o public/css/style.css",
@@ -21,7 +21,7 @@
     "image-minify": "imagemin image-build/* --out-dir=public/img/",
     "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
     "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css",
-    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json' --exclude='page-mock.psd' --exclude='.DS_Store' --exclude='.git/ '  ../react/ ../../javascript-canon/react/",
+    "copy-whole-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='.gitignore' --exclude='Gruntfile.js' --exclude='app.js' --exclude='package.json' --exclude='page-mock.psd' --exclude='.DS_Store' --exclude='.git/'  ../react/ ../../javascript-canon/react/" ,
     "start": "npm run watch-js & npm run watch-css",
     "wp": "./node_modules/.bin/webpack-dev-server"
   },
