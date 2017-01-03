@@ -1,6 +1,6 @@
 // use strict mode
 "use strict";
-import { express } from "express";
+var express = require("express")  ;
 
 var
 
@@ -156,7 +156,7 @@ app.use(require('./routes/resource'));
  */
 
 // grab asset files...images, .css, .js, etc.
-app.use(express.static(__dirname + "/public/"));
+//app.use(express.static(__dirname + "/public/"));
 
 /*
  * ========================
