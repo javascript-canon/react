@@ -1,4 +1,6 @@
-const { render } = ReactDOM;
+import React from 'react'
+import { render } from 'react-dom'
+import { hello, goodbye } from './lib'
 
 // AJAX in the resources API with Axios after the component renders
 // componentDidMount: function() {
@@ -14,11 +16,10 @@ const { render } = ReactDOM;
 //   },
 
   render(
-  <h1 id='title'
-      className='header'
-      style={{backgroundColor: 'orange', color: 'white', fontFamily: 'verdana'}}>
-    Hello World
-  </h1>,
+    <div>
+      {hello}
+      {goodbye}
+    </div>,
   document.getElementById('navigation')
 )
 

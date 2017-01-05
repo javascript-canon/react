@@ -26,8 +26,6 @@
     "json-loader": "^0.5.4",
     "ncp": "^2.0.0",
     "nodemon": "1.11.0",
-    "sass-loader": "^4.0.2",
-    "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
   },
   "dependencies": {
