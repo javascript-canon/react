@@ -6,5 +6,5 @@ render(
       style={{backgroundColor: 'orange', color: 'white', fontFamily: 'verdana'}}>
     Hello World
   </h1>,
-  document.getElementById('react-container')
+  document.getElementById('navigation')
 )
