@@ -11,16 +11,10 @@
   },
   "scripts": {
     "webpack":"./node_modules/.bin/webpack",
-    "build-sass": "node-sass css-build/style.scss css-build/style.css",
-    "concat-css": "cat css-build/*.css > public/css/style.css",
-    "clean-css": "cleancss public/css/style.css --s0 -o public/css/style.css",
-    "build-css": "npm run build-sass && npm run concat-css && npm run clean-css",
-    "watch-css": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run build-css && npm run copy-example'",
-    "image-minify": "imagemin image-build/* --out-dir=public/img/",
-    "book-minify": "imagemin image-build/book-images/* --out-dir=public/img/book-images/",
-    "copy-normalize": "ncp node_modules/normalize.css/normalize.css css-build/normalize.css",
-    "copy-whole-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='public/' --exclude='.gitignore' --exclude='app.js' --exclude='package.json' --exclude='webpack.config.js' --exclude='page-mock.psd' --exclude='.DS_Store' --exclude='.git/'  ../react/ ../../javascript-canon/react/",
-    "start": "nodemon -e js -w js-build -x 'npm run webpack && npm run copy-example'"
+    "watch-ejs": "nodemon -e ejs -w views -w views/partials -x 'npm run copy-example'",
+    "watch-js": "nodemon -e js -w js-build -x 'npm run webpack'",
+   "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='public/' --exclude='.gitignore' --exclude='app.js' --exclude='package.json' --exclude='webpack.config.js' --exclude='page-mock.psd' --exclude='.DS_Store' --exclude='.git/'  ../react/ ../../javascript-canon/react/",
+    "start": "npm run watch-js & npm run watch-ejs && npm run webpack && npm run copy-example"
   },
   "devDependencies": {
     "autoprefixer-loader": "^3.2.0",
@@ -29,13 +23,9 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "clean-css": "^3.4.21",
-    "css-loader": "^0.26.1",
     "json-loader": "^0.5.4",
     "ncp": "^2.0.0",
-    "node-sass": "^4.0.0",
     "nodemon": "1.11.0",
-    "normalize.css": "^5.0.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.14.0"
