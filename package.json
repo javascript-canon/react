@@ -10,10 +10,10 @@
     "url": "https://github.com/javascript-canon/react.git"
   },
   "scripts": {
-    "webpack":"./node_modules/.bin/webpack",
+    "webpack": "./node_modules/.bin/webpack",
     "watch-ejs": "nodemon -e ejs -w views -w views/partials -x 'npm run copy-example'",
     "watch-js": "nodemon -e js -w js-build -x 'npm run webpack'",
-   "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='public/' --exclude='.gitignore' --exclude='app.js' --exclude='package.json' --exclude='webpack.config.js' --exclude='page-mock.psd' --exclude='.DS_Store' --exclude='.git/'  ../react/ ../../javascript-canon/react/",
+    "copy-example": "rsync -av --exclude='css-build/' --exclude='js-build/' --exclude='node_modules/' --exclude='public/' --exclude='.gitignore' --exclude='app.js' --exclude='package.json' --exclude='webpack.config.js' --exclude='page-mock.psd' --exclude='.DS_Store' --exclude='.git/'  ../react/ ../../javascript-canon/react/",
     "start": "npm run watch-js & npm run watch-ejs && npm run webpack && npm run copy-example"
   },
   "devDependencies": {
@@ -31,6 +31,7 @@
     "webpack": "^1.14.0"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "ejs": "^2.5.3",
     "express": "^4.14.0",
     "jquery": "^3.1.0",
