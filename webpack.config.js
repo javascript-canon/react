@@ -1,10 +1,10 @@
-var webpack = require("webpack");
+const webpack = require("webpack");
 
 module.exports = {
-  entry: "./js-build/build.js",
+  entry: "./js-build/react.js",
   output: {
-    path: "public/js",
-    filename: "foos.js",
+    path: "../../javascript-canon/public/js/react",
+    filename: "react-bundle.js",
     publicPath: "public"
   },
   module: {
@@ -16,19 +16,6 @@ module.exports = {
         query: {
           presets: ["latest", "stage-0", "react"]
         }
-      },
-      {
-        test: /\.json$/,
-        exclude: /(node_modules)/,
-        loader: "json-loader"
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader!autoprefixer-loader'
-      },
-      {
-        test: /\.scss$/,
-        loader: 'style-loader!css-loader!autoprefixer-loader!sass-loader'
       }
     ]
   }
