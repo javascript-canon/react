@@ -1,3 +1,6 @@
+// use strict mode
+"use strict";
+
 export const MainNavigationListItem = ({type}) => (
 
   <li className="nav__list-item">

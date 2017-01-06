@@ -1,10 +1,13 @@
+// use strict mode
+"use strict";
+
 import { MainNavigationListItem } from './MainNavigationListItem';
 
 export const MainNavigationList = ({resourceTypes}) => (
     <ul className="nav__list">
-      {resourceTypes.map((type, i) =>
+      {resourceTypes.map((getTypes, i) =>
         <MainNavigationListItem key={i}
-                                type={type.type} />
+                                type={getTypes.type} />
       )}
     </ul>
   )
