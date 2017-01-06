@@ -9,7 +9,8 @@ import { MainNavigationListItem } from './MainNavigationListItem';
  */
 export const MainNavigationList = ({resourceTypes}) => (
   /* Use Array.prototype.map() to loop over the resource type object
-   * and place object properties in the list item component
+   * and place object properties in the list item component. Use the
+   * JSX spread operator to populate the list item content.
    */
     <ul className="nav__list">
       {resourceTypes.map((getTypes, i) =>
