@@ -7,7 +7,7 @@ import { render } from 'react-dom'
 import { CommentListContainer } from './components/CommentListContainer';
 
 // Make sure React is attached to the window object to avoid bugs
-window.React = React;
+// window.React = React;
 
 // Build the <nav>x`
 render(
