@@ -3,28 +3,14 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-import { MainNavigationList } from './components/MainNavigationList';
+//import { MainNavigationList } from './components/MainNavigationList';
+import { CommentListContainer } from './components/CommentListContainer';
 
 // Make sure React is attached to the window object to avoid bugs
 window.React = React;
 
-// Build the <nav>
+// Build the <nav>x`
 render(
-  <MainNavigationList resourceTypes = {
-    [
-      {
-        type: "show all types"
-      },
-      {
-        type: "books"
-      },
-      {
-        type: "websites"
-      },
-      {
-        type: "classes"
-      }
-    ]
-  } />,
+  <CommentListContainer />,
   document.getElementById('nav__react-target')
 )
