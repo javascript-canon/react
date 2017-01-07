@@ -11,9 +11,11 @@ export class CommentList extends React.Component {
   // }
   render() {
   // I changed map(renderComment) to map(this.renderComment)
-    return <ul>{this.props.comments.map(this.renderComment)}</ul>;
+    return <ul>
+      {this.props.comments.map(this.renderComment)}
+    </ul>;
   }
-  renderComment({body, author}) {
-    return <li>{author}</li>;
+  renderComment({type}) {
+    return <li key={type}>{type}</li>;
   }
 }
