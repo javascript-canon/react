@@ -6,7 +6,7 @@ import { render } from 'react-dom'
 import { NavListContainer } from './components/NavListContainer';
 
 // Make sure React is attached to the window object to avoid bugs
-// window.React = React;
+window.React = React;
 
 // Build the <nav>
 render(
