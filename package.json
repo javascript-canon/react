@@ -23,7 +23,6 @@
     "babel-preset-latest": "^6.16.0",
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-0": "^6.16.0",
-    "json-loader": "^0.5.4",
     "ncp": "^2.0.0",
     "nodemon": "1.11.0",
     "webpack": "^1.14.0"

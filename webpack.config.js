@@ -16,11 +16,6 @@ module.exports = {
         query: {
           presets: ["latest", "stage-0", "react"]
         }
-      },
-      {
-        test: /\.json$/,
-        exclude: /(node_modules)/,
-        loader: "json-loader"
       }
     ]
   }
