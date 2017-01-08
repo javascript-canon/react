@@ -1,7 +1,14 @@
 // use strict mode
 "use strict";
 
-import { Component } from 'react';
+/* Import React
+ *
+ * TODO: Component was ES6 destructured from the React object once
+ * (i.e. import { Component } from 'react') but that didn't work after
+ * converting to the Container component pattern
+ * (http://bit.ly/2i5j7ZT). Learn why.
+ */
+import React from 'react';
 
 /* Create a stateless "CoreSiteNavigation" component that contains the
  * the links to the core site pages.
