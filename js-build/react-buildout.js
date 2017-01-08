@@ -3,14 +3,13 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-//import { MainNavigationList } from './components/MainNavigationList';
-import { CommentListContainer } from './components/CommentListContainer';
+import { NavListContainer } from './components/NavListContainer';
 
 // Make sure React is attached to the window object to avoid bugs
 // window.React = React;
 
-// Build the <nav>x`
+// Build the <nav>`
 render(
-  <CommentListContainer />,
+  <NavListContainer />,
   document.getElementById('nav__react-target')
 )

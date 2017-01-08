@@ -1,3 +1,6 @@
+// use strict mode
+"use strict";
+
 import React from 'React';
 import { NavList } from './NavList';
 import $ from 'jquery';
