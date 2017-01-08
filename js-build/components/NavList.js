@@ -5,6 +5,7 @@ import React from 'React';
 import { render } from 'react-dom'
 import { CoreSiteNavigation } from './CoreSiteNavigation';
 
+// http://bit.ly/2i5j7ZT
 export class NavList extends React.Component {
   constructor(props) {
     super(props);
