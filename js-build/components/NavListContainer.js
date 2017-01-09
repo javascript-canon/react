@@ -72,7 +72,7 @@ export class NavListContainer extends React.Component {
 
   /* Render the child <NavList /> component where its properties are
    * the <NavListContainer /> filter resource types
-  */
+   */
   render() {
     return <NavList resourceTypes={this.state.resourceTypes} />;
   }
