@@ -33,7 +33,8 @@ export class NavListContainer extends React.Component {
   }
 
   /* After <NavListContainer /> lands on the page, AJAX in the
-   * resources API with jQuery...
+   * resources API with jQuery and let that be the returned data
+   * that's named 'resourceTypes...
    */
   componentDidMount() {
     $.ajax({
@@ -41,9 +42,18 @@ export class NavListContainer extends React.Component {
       dataType: 'json',
       success: function(resourceTypes) {
 
+        /* ...create two variables: one that will be an array of
+         * resource types and another that will be an array of
+         * resources types with its multiple copies removed.
+         */
         var typesArray = [],
             filteredTypesArray;
 
+        /* ...loop through resources API, find the types, add them to
+         * 'typesArray', and then remove any multiple copies it
+         * contains using undescore's 'uniq' method. The array with
+         * out the duplicates is called 'filteredTypesArray'.
+         */
         resourceTypes.forEach(function(item, index){
           typesArray.push(item.type);
           return filteredTypesArray = _.uniq(typesArray);
@@ -51,7 +61,7 @@ export class NavListContainer extends React.Component {
 
         this.resourceTypes = filteredTypesArray;
         this.setState({resourceTypes: filteredTypesArray});
-      }.bind(this)
+      }.bind(this);
     });
   }
   render() {
