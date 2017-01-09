@@ -59,9 +59,13 @@ export class NavListContainer extends React.Component {
           return filteredTypesArray = _.uniq(typesArray);
         });
 
+        /* ...finally, let the resourcesTypes equal the new filtered
+         * array update the component's state with this new array
+         * using this.setState.
+         */
         this.resourceTypes = filteredTypesArray;
         this.setState({resourceTypes: filteredTypesArray});
-      }.bind(this);
+      }.bind(this)
     });
   }
   render() {
