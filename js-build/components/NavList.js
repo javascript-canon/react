@@ -1,12 +1,12 @@
 // use strict mode
 "use strict";
 
-import React from 'React';
+import { Component } from 'React';
 import { render } from 'react-dom'
 import { CoreSiteNavigation } from './CoreSiteNavigation';
 import _ from 'underscore';
 
-export class NavList extends React.Component {
+export class NavList extends Component {
   constructor(props) {
     super(props);
   }
