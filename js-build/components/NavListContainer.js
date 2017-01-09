@@ -41,16 +41,16 @@ export class NavListContainer extends React.Component {
       dataType: 'json',
       success: function(resourceTypes) {
 
-        var newArray = [],
-            filteredArray;
+        var typsArray = [],
+            filteredTypesArray;
 
         resourceTypes.forEach(function(item, index){
-          newArray.push(item.type);
-          return filteredArray = _.uniq(newArray);
+          typsArray.push(item.type);
+          return filteredTypesArray = _.uniq(typsArray);
         });
 
-        this.resourceTypes = filteredArray;
-        this.setState({resourceTypes: filteredArray});
+        this.resourceTypes = filteredTypesArray;
+        this.setState({resourceTypes: filteredTypesArray});
       }.bind(this)
     });
   }
