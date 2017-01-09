@@ -19,7 +19,6 @@ export class NavList extends React.Component {
           <a href="/react" className="nav__button">show all types</a>
         </li>
         {this.props.resourceTypes.map(this.renderResourceTypes)}
-
       </ul>
       <CoreSiteNavigation />
     </nav>;
