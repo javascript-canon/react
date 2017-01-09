@@ -19,11 +19,22 @@ import { NavList } from './NavList';
  * data being fetched contains duplicates...they're removed by
  * underscore before being passed down to the child component.
  */
+
+ /* Create a component called '<NavListContainer />' and execute
+  * 'super()'inside 'constructor()' so that 'this' can be properly
+  * used. Read 'Exploring ES6', (15.2.3.2 Superconstructor calls) for
+  * more info. Then let the component state contain an array called
+  * 'resourceTypes'
+  */
 export class NavListContainer extends React.Component {
   constructor() {
     super();
     this.state = { resourceTypes: [] };
   }
+
+  /* After <NavListContainer /> lands on the page, AJAX in the
+   * resources API with jQuery...
+   */
   componentDidMount() {
     $.ajax({
       url: "http://localhost:3000/api/resources",

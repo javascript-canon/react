@@ -6,7 +6,6 @@ import { render } from 'react-dom'
 import { CoreSiteNavigation } from './CoreSiteNavigation';
 import _ from 'underscore';
 
-// http://bit.ly/2i5j7ZT
 export class NavList extends React.Component {
   constructor(props) {
     super(props);
