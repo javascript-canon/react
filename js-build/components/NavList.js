@@ -26,9 +26,9 @@ export class NavList extends React.Component {
     </nav>;
   }
 
-  renderResourceTypes({type}) {
-    return <li className="nav__list-item" key={type}>
-      <a className="nav__button">{type}</a>
+  renderResourceTypes(i) {
+    return <li className="nav__list-item" key={i}>
+      <a className="nav__button">{i}</a>
     </li>;
   }
 }
