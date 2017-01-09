@@ -22,7 +22,7 @@ import { NavList } from './NavList';
  */
 
  /* Create a component called '<NavListContainer />' and execute
-  * 'super()'inside 'constructor()' so that 'this' can be properly
+  * 'super()' inside 'constructor()' so that 'this' can be properly
   * used. Read 'Exploring ES6', (15.2.3.2 Superconstructor calls) for
   * more info. Then let the component state contain an array called
   * 'resourceTypes'
