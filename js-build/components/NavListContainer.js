@@ -26,10 +26,8 @@ export class NavListContainer extends React.Component {
           return filteredArray = _.uniq(newArray);
         });
 
-        // Make sure this gets deleted before deploying
-        console.log(filteredArray);
-
-        this.setState({filteredArray: filteredArray});
+        this.resourceTypes = filteredArray;
+        this.setState({resourceTypes: filteredArray});
       }.bind(this)
     });
   }
