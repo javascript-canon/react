@@ -2,7 +2,7 @@
 "use strict";
 
 // Import React
-import React from 'React';
+import { PropTypes, Component } from 'React';
 
 // Import jQuery
 import $ from 'jquery';
@@ -21,13 +21,13 @@ import { NavList } from './NavList';
  * code to render it is in "react-buildout.js."
  */
 
- /* Create a component called '<NavListContainer />' and execute
-  * 'super()' inside 'constructor()' so that 'this' can be properly
-  * used. Read 'Exploring ES6', (15.2.3.2 Superconstructor calls) for
-  * more info. Then let the component state contain an array called
-  * 'resourceTypes'
-  */
-export class NavListContainer extends React.Component {
+/* Create a component called '<NavListContainer />' and execute
+ * 'super()' inside 'constructor()' so that 'this' can be properly
+ * used. Read 'Exploring ES6', (15.2.3.2 Superconstructor calls) for
+ * more info. Then let the component state contain an array called
+ * 'resourceTypes'
+ */
+export class NavListContainer extends Component {
   constructor() {
     super();
     this.state = { resourceTypes: [] };
