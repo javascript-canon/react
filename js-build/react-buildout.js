@@ -18,5 +18,5 @@ render(
 // Build all the resources and place them on the page
 render(
   <ResourceListContainer />,
-  document.getElementById('targetEl')
+  document.getElementById('container__react-target')
 )

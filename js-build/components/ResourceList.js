@@ -10,9 +10,9 @@ export class ResourceList extends Component {
   }
 
   render() {
-    return <div>
-       {this.props.resources.map(this.renderResources)}
-    </div>;
+    return <section id="targetEl" className="single-resource-container">
+          {this.props.resources.map(this.renderResources)}
+        </section>;
   }
 
   renderResources({i, title, author, image, link, href}) {
