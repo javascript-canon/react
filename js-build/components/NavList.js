@@ -4,7 +4,6 @@
 import { Component } from 'React';
 import { render } from 'react-dom'
 import { CoreSiteNavigation } from './CoreSiteNavigation';
-import _ from 'underscore';
 
 export class NavList extends Component {
   constructor(props) {
