@@ -5,6 +5,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { NavListContainer } from './components/NavListContainer';
 import { ResourceListContainer } from './components/ResourceListContainer';
+import { Router, Route, hashHistory } from 'react-router'
 
 // Make sure React is attached to the window object to avoid bugs
 window.React = React;
@@ -17,6 +18,8 @@ render(
 
 // Build all the resources and place them on the page
 render(
-  <ResourceListContainer />,
+  <Router history={hashHistory}>
+    <Route path="/" component={ResourceListContainer}/>
+  </Router>,
   document.getElementById('container__react-target')
 )
