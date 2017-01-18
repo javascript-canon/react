@@ -57,7 +57,7 @@ export class ResourceListContainer extends Component {
     }
 
     $.ajax({
-      url: getAPI,
+      url: "/api/resources",
       dataType: 'json',
       success: function(resources) {
         this.setState({resources: resources});

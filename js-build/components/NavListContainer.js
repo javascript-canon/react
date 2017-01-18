@@ -57,7 +57,7 @@ export class NavListContainer extends Component {
     }
 
     $.ajax({
-      url: getAPI,
+      url: "/api/resources",
       dataType: 'json',
       success: function(resourceTypes) {
 
