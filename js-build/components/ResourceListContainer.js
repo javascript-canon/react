@@ -39,23 +39,6 @@ export class ResourceListContainer extends Component {
    */
   componentDidMount() {
 
-    var
-
-      // Create an variable that will store a reference to the API
-      getAPI,
-
-       // Set up Node environment detection
-      env = process.env.NODE_ENV || "development";
-
-    /* If this the dev environment, point to the dev API, otherwise
-     * point to the production API
-     */
-    if (env == 'development') {
-      getAPI = "http://localhost:3000/api/resources";
-    } else {
-      getAPI = "http://javascript-canon.herokuapp.com/api/resources";
-    }
-
     $.ajax({
       url: "/api/resources",
       dataType: 'json',
