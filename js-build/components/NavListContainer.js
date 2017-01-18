@@ -38,12 +38,13 @@ export class NavListContainer extends Component {
    * that's named 'resourceTypes...
    */
   componentDidMount() {
+
     var
 
       // Create an variable that will store a reference to the API
       getAPI,
 
-       // Set up Node environment detection
+      // Set up Node environment detection
       env = process.env.NODE_ENV || "development";
 
     /* If this the dev environment, point to the dev API, otherwise
