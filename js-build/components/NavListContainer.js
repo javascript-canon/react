@@ -1,8 +1,8 @@
 // use strict mode
 "use strict";
 
-// Import React
-import { PropTypes, Component } from 'React';
+// Import Component and destructure it from React
+import { Component } from 'React';
 
 // Import jQuery
 import $ from 'jquery';
