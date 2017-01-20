@@ -13,6 +13,8 @@ import _ from 'underscore';
 // Import the ResourceList child component
 import { ResourceList } from './ResourceList';
 
+
+
 /* An implementation of the React Container Components design pattern,
  * where a parent component fetches data via AJAX and passes it down
  * to a child component (read more at: http://bit.ly/2jiTEdg). The
