@@ -5,6 +5,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { NavListContainer } from './components/NavListContainer';
 import { ResourceListContainer } from './components/ResourceListContainer';
+import { Page404 } from './components/Page404';
 import { Router, Route, hashHistory } from 'react-router'
 
 // Make sure React is attached to the window object to avoid bugs
@@ -16,10 +17,13 @@ render(
   document.getElementById('nav__react-target')
 )
 
-// Build all the resources and place them on the page
+/* Build all the resources and place them on the page via a bound
+ * router
+ */
 render(
   <Router history={hashHistory}>
-    <Route path="/" component={ResourceListContainer}/>
+    <Route path="/" component={ResourceListContainer} />
+    <Route path="*" component={Page404} />
   </Router>,
   document.getElementById('container__react-target')
 )
