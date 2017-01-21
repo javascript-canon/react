@@ -7,6 +7,7 @@ import { NavListContainer } from './components/NavListContainer';
 import { ResourceListContainer } from './components/ResourceListContainer';
 import { Page404 } from './components/Page404';
 import { Router, Route, hashHistory } from 'react-router'
+import { SingleResource } from './components/SingleResource'
 
 // Make sure React is attached to the window object to avoid bugs
 window.React = React;
@@ -23,6 +24,7 @@ render(
 render(
   <Router history={hashHistory}>
     <Route path="/" component={ResourceListContainer} />
+    <Route path="single-resource" component={SingleResource} />
     <Route path="*" component={Page404} />
   </Router>,
   document.getElementById('container__react-target')
