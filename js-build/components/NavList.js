@@ -15,7 +15,7 @@ export class NavList extends Component {
       <h2 className="nav__header">display by resource type</h2>
       <ul className="nav__list">
         <li className="nav__list-item">
-          <a href="/react" className="nav__button">show all types</a>
+          <a href="/react/" className="nav__button">show all types</a>
         </li>
         {this.props.resourceTypes.map(this.renderResourceTypes)}
       </ul>
