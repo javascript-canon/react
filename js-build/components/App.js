@@ -1,7 +1,12 @@
-import React from 'react'
-import { render } from 'react-dom'
+import { createClass } from 'react'
+import { ResourceListContainer } from './ResourceListContainer'
 
-export const App = () => (
-
-  <h1>foo bar baz</h1>
-  )
+export const App = createClass({
+  render() {
+    return (
+      <div className="App">
+          <ResourceListContainer />
+      </div>
+    )
+  }
+})
