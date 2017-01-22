@@ -1,7 +1,7 @@
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./js-build/react-buildout.js",
+  entry: "./js-build/index.js",
   output: {
     path: "../../javascript-canon/public/js/react",
     filename: "react-bundle.js",
