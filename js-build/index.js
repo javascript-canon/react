@@ -11,13 +11,13 @@ import { Page404 } from './components/Page404';
 // Make sure React is attached to the window object to avoid bugs
 window.React = React;
 
-// Build the <nav> and place it on the page
+// Build the <nav> and place it in the sidebar
 render(
   <NavListContainer />,
   document.getElementById('nav__react-target')
 )
 
-
+// Build the core <App> container and place it in the main content area
 render(
   <App />,
   document.getElementById('container__react-target')
