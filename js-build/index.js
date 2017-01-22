@@ -3,11 +3,13 @@
 
 import React from 'react';
 import { render } from 'react-dom';
+import { App } from './components/App'
 import { NavListContainer } from './components/NavListContainer';
 import { ResourceListContainer } from './components/ResourceListContainer';
+import { SingleResource } from './components/SingleResource'
 import { Page404 } from './components/Page404';
 import { Router, Route, hashHistory } from 'react-router'
-import { SingleResource } from './components/SingleResource'
+
 
 // Make sure React is attached to the window object to avoid bugs
 window.React = React;
@@ -23,7 +25,7 @@ render(
  */
 render(
   <Router history={hashHistory}>
-    <Route path="/" component={ResourceListContainer} />
+    <Route path="/" component={App} />
     <Route path="single-resource" component={SingleResource} />
     <Route path="*" component={Page404} />
   </Router>,
