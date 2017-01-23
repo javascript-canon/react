@@ -4,8 +4,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router'
-import { NavListContainer } from './components/NavListContainer';
 import { App } from './components/App';
+import { NavListContainer } from './components/NavListContainer';
 import { Page404 } from './components/Page404';
 
 // Make sure React is attached to the window object to avoid bugs
