@@ -2,7 +2,7 @@
 "use strict";
 
 // Import React
-import { PropTypes, Component } from 'React';
+import { Component } from 'React';
 
 // Import jQuery
 import $ from 'jquery';
