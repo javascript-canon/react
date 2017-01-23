@@ -4,8 +4,7 @@ module.exports = {
   entry: "./js-build/index.js",
   output: {
     path: "../../javascript-canon/public/js/react",
-    filename: "react-bundle.js",
-    publicPath: "public"
+    filename: "react-bundle.js"
   },
   module: {
     loaders: [
