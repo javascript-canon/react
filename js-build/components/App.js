@@ -5,7 +5,7 @@ export const App = createClass({
   render() {
     return (
       <div className="App">
-          <ResourceListContainer />
+        <ResourceListContainer />
       </div>
     )
   }
