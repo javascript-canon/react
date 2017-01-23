@@ -24,5 +24,3 @@ export const CoreSiteNavigation = () => (
     </li>
   </ul>
   )
-
-
