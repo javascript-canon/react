@@ -54,6 +54,7 @@ export class ResourceListContainer extends Component {
         }
       }.bind(this)
     });
+
   }
 
   componentWillUnmount() {
