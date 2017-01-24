@@ -25,10 +25,10 @@ render(
 /* Build all the resources and place them on the page via a bound
  * router
  */
-// render(
-//   <Router history={hashHistory}>
-//     <Route path="/" component={App} />
-//     <Route path="*" component={Page404} />
-//   </Router>,
-//   document.getElementById('container__react-target')
-// )
+render(
+  <Router history={hashHistory}>
+    <Route path="/" component={App} />
+    <Route path="*" component={Page404} />
+  </Router>,
+  document.getElementById('container__react-target')
+)
