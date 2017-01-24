@@ -38,7 +38,10 @@ export class ResourceListContainer extends Component {
 
   /* After <ResourceListContainer /> lands on the page, AJAX in the
    * resources API with jQuery and let that be the returned data
-   * that's named 'resources...
+   * that's named 'resources. Check to see if the the component is
+   * mounted before setting state with data and set mounting to false
+   * on unmount to prevent a memory leak. Read more at
+   * http://bit.ly/2jVWNUe and http://bit.ly/2jW1mhc.
    */
   componentDidMount() {
 
