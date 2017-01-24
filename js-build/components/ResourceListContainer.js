@@ -30,6 +30,7 @@ import { ResourceList } from './ResourceList';
  * 'resources'
  */
 export class ResourceListContainer extends Component {
+
   constructor() {
     super();
     this.state = { resources: [] };
@@ -45,9 +46,15 @@ export class ResourceListContainer extends Component {
       url: "/api/resources",
       dataType: 'json',
       success: function(resources) {
-        this.setState({resources: resources});
+        if(this._mounted != false) {
+          this.setState({resources: resources});
+        }
       }.bind(this)
     });
+  }
+
+  componentWillUnmount() {
+    this._mounted = false;
   }
 
   /* Render the child <ResourceList /> component where its properties
