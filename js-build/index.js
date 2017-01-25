@@ -4,8 +4,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router'
-import { App } from './components/App';
 import { NavListContainer } from './components/NavListContainer';
+import { App } from './components/App';
+import { SingleType } from './components/SingleType';
 import { SingleResource } from './components/SingleResource';
 import { Page404 } from './components/Page404';
 
@@ -24,7 +25,8 @@ render(
 render(
   <Router history={hashHistory}>
     <Route path="/" component={App} />
-    <Route path="/foo" component={SingleResource} />
+    <Route path="/type" component={App} />
+    <Route path="/resource" component={App} />
     <Route path="*" component={Page404} />
   </Router>,
   document.getElementById('container__react-target')
