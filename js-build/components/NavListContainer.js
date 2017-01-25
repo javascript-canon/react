@@ -35,7 +35,10 @@ export class NavListContainer extends Component {
 
   /* After <NavListContainer /> lands on the page, AJAX in the
    * resources API with jQuery and let that be the returned data
-   * that's named 'resourceTypes...
+   * that's named 'resources. Check to see if the the component is
+   * mounted before setting state with data and set mounting to false
+   * on unmount to prevent a memory leak. Read more at
+   * http://bit.ly/2jVWNUe and http://bit.ly/2jW1mhc.
    */
   componentDidMount() {
 
@@ -43,7 +46,7 @@ export class NavListContainer extends Component {
       url: "/api/resources",
       dataType: 'json',
       success: function(resourceTypes) {
-
+        if(this._mounted != false) {
         /* ...create two variables: one that will be an array of
          * resource types and another that will be an array of
          * resources types with its multiple copies removed.
@@ -67,8 +70,13 @@ export class NavListContainer extends Component {
          */
         this.resourceTypes = filteredTypesArray;
         this.setState({resourceTypes: filteredTypesArray});
+      }
       }.bind(this)
     });
+  }
+
+  componentWillUnmount() {
+    this._mounted = false;
   }
 
   /* Render the child <NavList /> component where its properties are
